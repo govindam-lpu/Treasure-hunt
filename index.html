@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/project.css" type="text/css">
+    <script type="text/javascript" src="project.js"></script>
+    <link rel="icon" href="assets/logo.ico">
+    <title>THE TREASURE HUNT</title>
+</head>
+<body style="text-align: center;">
+    <div id="header">
+        <h1 class="treasure-hunt">THE TREASURE HUNT</h1>
+        <div id="back" onclick="back()"><button id="backbtn">BACK</button></div>
+    </div>
+    <div id="choicebox" >
+        <button class="easy choice" onclick="size(3,3)">EASY <br><span class="detail">[3 PRIZE, 1 BOMB, 3X3 SIZE]</span></button><br>
+        <button class="medium choice" onclick="size(4,4)">MEDIUM<br><span class="detail">[4 PRIZE, 2 BOMB, 4X4 SIZE]</span></button><br>
+        <button class="hard choice" onclick="size(6,6)">HARD<br><span class="detail">[6 PRIZE, 3 BOMB, 6X6 SIZE]</span></button><br>
+    </div>
+    
+    <div id="contai"></div>
+    <div id="gameover" class="hideit"><p class="parawon para">YOU LOOSE <br><span class="score">you clicked on a bomb<span  onclick="back()">🔄️</span></span></p></div>
+    <div id="youwon" class="hideit"><p class="para parawon">YOU WON <br> <span class="score" id="scorer"></span><span class="score" onclick="back()">🔄️</span></p></div>
+    <div id="guess">
+        <input id="inputfield" type="text" placeholder="eg:A0"><button type="button" id="guessbtn">GUESS</button>
+        <br><span id="error"></span>
+    </div>
+</body>
+</html>
